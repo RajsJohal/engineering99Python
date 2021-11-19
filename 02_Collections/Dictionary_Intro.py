@@ -49,7 +49,6 @@ print(fav_movie.values())
 print(fav_movie.items()) # key value pair as a tuple
 
 
-
 #Differece between get and []
 # print(c["Steam"])
 # print(c.get("Steam"))
