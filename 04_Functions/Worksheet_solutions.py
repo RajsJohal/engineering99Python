@@ -77,6 +77,11 @@ print(q3a(7))
 # print("\nQ3b\n")
 # Q3b: Now add some functionality to the function which does not error if the user inputs something other than a digit
 # A3b:
+def q3b(num):
+    for n in range(2, int(num ** 1 / 2) + 1):
+        if num % n == 0:
+            return False
+        return True
 # -------------------------------------------------------------------------------------- #
 
 
