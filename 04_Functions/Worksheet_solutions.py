@@ -43,21 +43,37 @@ print(alpha("A"))
 # ID number consisting of the positions of each letter in the name
 # e.g. f("bob") = "1141" as "b" is in position 1 and "o" is in position 14
 # A2b:
-def nq2b(name):
+def q2b(name):
     ID = ""
     for n in name:
         ID = ID + str(alpha(n))
     return ID
-print(nq2b("Bob"))
+print(q2b("Bob"))
 # print("\nQ2c\n")
 # Q2c: Create a function which turns this ID into a password. The function should subtract
 # the sum of the numbers in the id that was generated from the whole number of the id.
 # e.g. f("bob") -> 1134 (because bob's id was 1141 and 1+1+4+1 = 7 so 1141 - 7 = 1134)
 # A2c:
+def q2c(name):
+    ID = q2b(name)
+    password = 0
+    for n in ID:
+        password = password + int(n)
+    password = int(ID) - password
+    return password
+print(q2c("bob"))
+
+
 # -------------------------------------------------------------------------------------- #
 # print("\nQ3a\n")
 # Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
 # A3a:
+def q3a(num):
+    for n in range(2, int(num ** 1 / 2) + 1):
+        if num % n == 0:
+            return False
+        return True
+print(q3a(7))
 # print("\nQ3b\n")
 # Q3b: Now add some functionality to the function which does not error if the user inputs something other than a digit
 # A3b:
