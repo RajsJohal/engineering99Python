@@ -54,30 +54,40 @@ print("\nQ2b\n")
 # Q2b: Now create a list of numbers from list_of_numbers that are divisible
 # by both 3 and 4 using the divisible_by_n method above
 # A2b:
+divisible_list = []
+for m in list_of_numbers:
+    num2 = Number(m)
+    if num2.divisible_by_n(3):
+        divisible_list.append(m)
+    elif num2.divisible_by_n(4):
+        divisible_list.append(m)
+    else:
+        print("No divisible numbers")
+print(divisible_list)
 # -------------------------------------------------------------------------------------- #
 print("\nQ3a\n")
 # Q3a: Fix the following class and subclass (uncomment by selecting all rows and pressing CTRL + /)
-# class Boss(object):
-#     def __init__(self, name, attitude, behaviour, face):
-#         name = name
-#         attitude = attitude
-#         behaviour = behaviour
-#         face = face
-#
-#     def get_attitude(self):
-#         return attitude
-#
-#     def get_behaviour(self):
-#         return behaviour
-#
-#     def get_face(self):
-#         return face
-#
-#
-# class GoodBoss(Boss):
-#     def __init__(self, name, attitude, behaviour, face):
-#         super()
-#
-#    def encourage(self):
-#        print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
+class Boss(object):
+    def __init__(self, name, attitude, behaviour, face):
+        self.name = name
+        self.attitude = attitude
+        self.behaviour = behaviour
+        self.face = face
+
+    def get_attitude(self):
+        return attitude
+
+    def get_behaviour(self):
+        return behaviour
+
+    def get_face(self):
+        return face
+
+
+class GoodBoss(Boss):
+    def __init__(self, name, attitude, behaviour, face):
+        super().__init__()
+
+   def encourage(self):
+       print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
 # A3a:
