@@ -2,6 +2,7 @@ from fizzbuzz import *
 
 #user input --> max number to hit
 #verify_digits
+# monkeypatch - throwing in inputs to the input function to test user inputs
 
 
 # produces correct output
