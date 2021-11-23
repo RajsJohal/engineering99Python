@@ -1,6 +1,7 @@
 try:
     with open("order.txt") as file: #close files after code block is ran
         orders = file.read().split("\n")
+        print(orders, type(orders))
 
 
         # print(file, type(file))
@@ -24,7 +25,7 @@ print("The code will continue to run")
 # for order in orders:
 #     print(f"One {order} coming right up!")
 
-with open("tickets", "x") as file: # modes: r = read, w = write, a = append
+with open("tickets", "w") as file: # modes: r = read, w = write, a = append
     for order in orders:
         file.write(f"One {order} coming right up!\n")
 
