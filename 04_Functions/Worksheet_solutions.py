@@ -13,7 +13,7 @@ def f(int1):
             new_List.append(x)
     return new_List
 print(f(12))
-# print("\nQ1b\n")
+print("\nQ1b\n")
 # Q1b: Write a function which takes in two integers as arguments and returns true if one of the numbers
 # is a factor of the other, false otherwise
 # (bonus points if you call your previous function within this function)
@@ -27,7 +27,7 @@ def factor(num1, num2):
         return "No factors here"
 print(factor(4, 2))
 # -------------------------------------------------------------------------------------- #
-# print("\nQ2a\n")
+print("\nQ2a\n")
 # Q2a: write a function which takes a letter (as a string) as an input and outputs it's position in the alphabet
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
              "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "]
@@ -38,7 +38,7 @@ def alpha(Letter: str):
 
 print(alpha("A"))
 
-# print("\nQ2b\n")
+print("\nQ2b\n")
 # Q2b: create a function which takes a persons name as an input string and returns an
 # ID number consisting of the positions of each letter in the name
 # e.g. f("bob") = "1141" as "b" is in position 1 and "o" is in position 14
@@ -49,7 +49,7 @@ def q2b(name):
         ID = ID + str(alpha(n))
     return ID
 print(q2b("Bob"))
-# print("\nQ2c\n")
+print("\nQ2c\n")
 # Q2c: Create a function which turns this ID into a password. The function should subtract
 # the sum of the numbers in the id that was generated from the whole number of the id.
 # e.g. f("bob") -> 1134 (because bob's id was 1141 and 1+1+4+1 = 7 so 1141 - 7 = 1134)
@@ -65,23 +65,32 @@ print(q2c("bob"))
 
 
 # -------------------------------------------------------------------------------------- #
-# print("\nQ3a\n")
+print("\nQ3a\n")
 # Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
 # A3a:
 def q3a(num):
-    for n in range(2, int(num ** 1 / 2) + 1):
-        if num % n == 0:
-            return False
-        return True
+    if num >= 2:
+        for x in range(2, num):
+            if num % x == 0:
+                return False
+            else:
+                return True
+    else:
+        return False
 print(q3a(7))
-# print("\nQ3b\n")
+print("\nQ3b\n")
 # Q3b: Now add some functionality to the function which does not error if the user inputs something other than a digit
 # A3b:
 def q3b(num):
-    for n in range(2, int(num ** 1 / 2) + 1):
-        if num % n == 0:
-            return False
-        return True
+    if num.isdigit():
+        for n in range(2, int(num ** 1 / 2) + 1):
+            if num % n == 0:
+                return False
+            return True
+    else:
+        print("Wrong type of input, try again")
+
+print(q3b("Hi"))
 # -------------------------------------------------------------------------------------- #
 
 
