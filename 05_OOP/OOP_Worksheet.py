@@ -75,19 +75,19 @@ class Boss(object):
         self.face = face
 
     def get_attitude(self):
-        return attitude
+        return self.attitude
 
     def get_behaviour(self):
-        return behaviour
+        return self.behaviour
 
     def get_face(self):
-        return face
+        return self.face
 
 
 class GoodBoss(Boss):
     def __init__(self, name, attitude, behaviour, face):
         super().__init__()
 
-   def encourage(self):
-       print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
+    def encourage(self):
+        print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
 # A3a:
