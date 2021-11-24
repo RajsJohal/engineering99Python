@@ -1,1 +1,10 @@
-{"Show Name": "Mr.Robot", "Director": "Sam Esmail", "Lead Actor": "Rami Malik", "No. of Seasons": 4, "Perfect": true, "flaws": null, "Genre": "Drama, Psychological Thriller, Techno-Thriller", "Release Year": 2015}
+{"Show Name": "Mr.Robot",
+  "Director": "Sam Esmail",
+  "Lead Actor": "Rami Malik",
+  "No. of Seasons": 4,
+  "Perfect": true,
+  "flaws": null,
+  "Genre": "Drama, Psychological Thriller, Techno-Thriller",
+  "Release Year": 2015,
+  "Ratings": {"IMDb": 0.85, "Rotten Tomatoes":  0.94, "Common Sense Media":  0.80}
+}
