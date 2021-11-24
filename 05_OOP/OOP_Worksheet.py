@@ -29,25 +29,27 @@ class Number:
             for x in range(2, self.integer):
                 if self.integer % x == 0:
                     return False
-                else:
-                    return True
+
+            return True
         else:
             return False
     def divisible_by_n(self, n):
         if self.integer % n == 0:
             return True
-        else:
-            return False
-# num = Number(6546)
-# print(num.is_prime())
+
+
+
+
 prime_list = []
 for n in list_of_numbers:
     num = Number(n)
     if num.is_prime():
         prime_list.append(n)
+    else:
+        pass
 print(prime_list)
 
-#prime_list = [53, 3, 17, 19, 223]
+#Expected prime_list = [53, 3, 17, 19, 223]
 
 # A2a:
 print("\nQ2b\n")
@@ -62,7 +64,7 @@ for m in list_of_numbers:
     elif num2.divisible_by_n(4):
         divisible_list.append(m)
     else:
-        print("No divisible numbers")
+        pass
 print(divisible_list)
 # -------------------------------------------------------------------------------------- #
 print("\nQ3a\n")
