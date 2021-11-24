@@ -16,12 +16,10 @@ class Show:
             return json.load(show_file)
 
     def get_average_rating(self) -> float:
-        imdb = self.ratings.get("IMDb")
-        rt = self.ratings.get("Rotten Tomatoes")
-        csm = self.ratings.get("Common Sense Media")
-
-        average = round((imdb + rt + csm) / 3, 2)
-        return average
+       total = 0
+       for rating in self.ratings.values():
+        total += rating
+       return total / len(self.ratings)
 
 
 mr_robot = Show("show.json")
