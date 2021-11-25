@@ -5,17 +5,22 @@ class RatesParser:
     def __init__(self, filepath):
         self.filepath = filepath
         exchange_info = self._open_json_exchange()
+        self.base = exchange_info.get("base")
         self.rates = exchange_info.get("rates")
+        self.date = exchange_info.get("date")
 
     def _open_json_exchange(self) -> dict:
         with open(self.filepath) as exchange_file:
             return json.load(exchange_file)
 
     def convert(self, currency:str, amount):
-        exchange = 0
-        rates = self.rates.get(currency)
-        exchange = rates * amount
-        return exchange
+        if currency in self.rates:
+            rates = self.rates.get(currency)
+            return rates * amount
+        else:
+            return False
+
+
 
 
 
@@ -28,4 +33,4 @@ class RatesParser:
 # Returns the value in other currency
 
 gbp = RatesParser("exchange_rates.json")
-print(gbp.convert("GBP", 10))
+print(gbp.convert("USD", 10))
